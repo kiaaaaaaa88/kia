@@ -8,7 +8,7 @@ load_dotenv()
 
 def get_pg_connection():
     # Menggunakan variabel lingkungan untuk URL koneksi PostgreSQL
-    conn = psycopg2.connect(os.getenv("DATABASE_PUBLIC_URL"), cursor_factory=RealDictCursor)
+    conn = psycopg2.connect(os.getenv("DATABASE_URL"), cursor_factory=RealDictCursor)
     return conn
 
 # Inisialisasi CryptContext untuk hashing password
